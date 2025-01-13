@@ -2,7 +2,7 @@ services:
   app:
     build: ./php
     volumes:
-      - ./src:/var/www/src
+      - C:/Users/nobun/laravel_lesson/src/laravel:/var/www/src/laravel
       - ./php/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
     ports:
       - 8080:80
