@@ -3,11 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Todo;
 
 class TodoController extends Controller
 {
     public function index()
     {
-        return view('todo.index'); // 修正
+        $todo = new Todo();
+        $todos = $todo->all();
+
+        return view('todo.index', ['todos' => $todos]);
     }
 }
